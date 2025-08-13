@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Upload Files - Print Service</title>
+<style>
+  body { font-family: Arial, sans-serif; background: linear-gradient(135deg,#ff9a9e 0%,#fad0c4 100%); margin: 0; padding: 0; }
+  header { background: #d500f9; padding: 20px; font-size: 2em; color: white; text-align: center; }
+  nav { background: #aa00ff; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+  nav a { color: white; text-decoration: none; font-weight: bold; padding: 10px; }
+  nav a:hover { background: #e040fb; }
+  main { padding: 20px; max-width: 600px; margin: auto; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+  h2 { text-align: center; color: #aa00ff; }
+  label { display: block; margin-top: 15px; font-weight: bold; }
+  input, textarea { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+  button { background: #aa00ff; color: white; padding: 10px 15px; margin-top: 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; }
+  button:hover { background: #d500f9; }
+  .whatsapp-btn { background: #25D366; margin-top: 15px; display: inline-block; padding: 10px 15px; border-radius: 5px; color: white; text-decoration: none; }
+</style>
+</head>
+<body>
+<header>Upload Files</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="upload.html">Upload</a>
+  <a href="printorder.html">Print Order</a>
+  <a href="delivery.html">Delivery Address</a>
+  <a href="payment.html">Payment</a>
+</nav>
+<main>
+  <h2>Upload Your Files</h2>
+  <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <label for="name">Your Name:</label>
+    <input type="text" name="name" required>
+    <label for="address">Your Address:</label>
+    <textarea name="address" rows="3" required></textarea>
+    <label for="document">Document File:</label>
+    <input type="file" name="document" required>
+    <label for="receipt">Payment Receipt:</label>
+    <input type="file" name="receipt">
+    <button type="submit">Submit</button>
+  </form>
+  <a class="whatsapp-btn" href="https://wa.me/918972548589" target="_blank">Notify on WhatsApp</a>
+</main>
+</body>
+</html>
